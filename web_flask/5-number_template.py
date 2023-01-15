@@ -45,6 +45,8 @@ def python(text='is cool'):
 def number(n):
   """ A function to return only number """
   return "{} is a number".format(n)
+
+
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def numTemplate(n):
   """ A function to return HTML template if input is an integer """
