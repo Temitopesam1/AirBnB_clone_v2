@@ -8,44 +8,44 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello():
-  """ A function to return a string """
-  return "Hello HBNB!"
+    """ A function to return a string """
+    return "Hello HBNB!"
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hel():
-  """ A function to return a string """
-  return "HBNB"
+    """ A function to return a string """
+    return "HBNB"
 
 
 @app.route('/c/<text>', strict_slashes=False)
 def c(text):
-  """ A function to return C and user input text """
-  newText = ""
-  for i in text:
-    if i == '_':
-      i = ' '
-    newText += i
-  return "C {}".format(newText)
+    """ A function to return C and user input text """
+    newText = ""
+    for i in text:
+        if i == '_':
+            i = ' '
+        newText += i
+    return "C {}".format(newText)
 
 
 @app.route('/python/<text>', strict_slashes=False)
 @app.route('/python', strict_slashes=False)
 def python(text='is cool'):
-  """ A function to return Python and user input text """
-  newText = ''
-  for i in text:
-    if i == '_':
-      i = ' '
-    newText += i
-  return "Python {}".format(newText)
+    """ A function to return Python and user input text """
+    newText = ''
+    for i in text:
+        if i == '_':
+            i = ' '
+        newText += i
+    return "Python {}".format(newText)
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
-  """ A function to return only number """
-  return "{} is a number".format(n)
+    """ A function to return only number """
+    return "{} is a number".format(n)
 
 
 if __name__ == '__main__':
-  app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
