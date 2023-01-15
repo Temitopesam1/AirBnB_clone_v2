@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script of a flask framework project """                                                                                                                                                                                                                                                                                                                                                     
+""" Script of a flask framework project """
 from flask import Flask, render_template
 
 
